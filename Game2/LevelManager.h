@@ -1,20 +1,26 @@
 #pragma once
-class Cursur;
 class Fade;
 
-class UIManager
+class LevelManager
 {
 public:
-	UIManager();
-	virtual ~UIManager();
+
+	LevelManager();
+	virtual ~LevelManager();
 	virtual void Init();
 	virtual void Update();
 	virtual void Render();
 	virtual void LateUpdate();
 	virtual void Release();
 
+	void ChangeScene();
+	
 private:
-	Cursur* cursur;
+	void LoadNewScene();
+	void UnloadCurScene();
+
+private:
+	Fade* fade;
 
 };
 

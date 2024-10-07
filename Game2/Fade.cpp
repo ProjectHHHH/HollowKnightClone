@@ -7,7 +7,7 @@ Fade::Fade()
 	AlphaValue = 0.f;
 	
 	isVisible = true;
-	isFadeIn = false;
+	fadeState = EFadeState::None;
 }
 
 Fade::~Fade()
@@ -17,13 +17,13 @@ Fade::~Fade()
 
 void Fade::Update()
 {
-	if (!isVisible) return;
+	if (!isVisible || fadeState == EFadeState::None) return;
 	fadeBox->Update();
 }
 
 void Fade::Render()
 {
-	if (!isVisible) return;
+	if (!isVisible || fadeState == EFadeState::None) return;
 	fadeBox->Render();
 }
 
@@ -54,11 +54,22 @@ void Fade::FadeOut()
 
 void Fade::GetFade()
 {
-	if (isFadeIn) FadeIn();
-	else FadeOut();
+	if (fadeState == EFadeState::FadeIn) FadeIn();
+	else if (fadeState == EFadeState::FadeOut)FadeOut();
 }
 
-void Fade::SetFade(bool fadeinOnOff)
+void Fade::SetFadestate(int fadeNum)
 {
-	isFadeIn = fadeinOnOff;
+	switch (fadeNum)
+	{
+	case 0 :
+		fadeState = EFadeState::FadeIn;
+		break;
+	case 1:
+		fadeState = EFadeState::FadeOut;
+		break;
+	default:
+		fadeState = EFadeState::None;
+		break;
+	}
 }

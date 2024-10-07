@@ -1,6 +1,13 @@
 #pragma once
 class ObRect;
 
+enum class EFadeState
+{
+	FadeIn  = 0,
+	FadeOut,
+	None
+};
+
 class Fade
 {
 public:
@@ -13,13 +20,15 @@ public:
 	virtual void Release();
 
 	void GetFade();
-	void SetFade(bool fadeinOnOff);
+	// 0 = fadein 1 = fadeout 2 = nonfade
+	void SetFadestate(int fadeNum);
 
+	inline float GetAlphaValue() const { return AlphaValue; }
 private:
 	ObRect* fadeBox;
+	EFadeState fadeState;
 
 	bool isVisible;
-	bool isFadeIn;
 
 	float AlphaValue;
 

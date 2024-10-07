@@ -1,11 +1,11 @@
 #pragma once
 class UIManager;
 
-class MainMenuScene
+class MainMenuLevel
 {
 public:
-	MainMenuScene();
-	virtual ~MainMenuScene();
+	MainMenuLevel();
+	virtual ~MainMenuLevel();
 	virtual void Init();
 	virtual void Release();
 	virtual void Update();
