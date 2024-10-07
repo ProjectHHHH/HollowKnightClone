@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Ignore Files
+/2DFrameWork
+/Build
+/Game1
+/Libs
+/Shaders
+/TileMapEditor
+/Txt
