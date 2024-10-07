@@ -22,7 +22,8 @@
     <ClInclude Include="Cursur.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="Main.h" />
-    <ClInclude Include="MainMenuScene.h" />
+    <ClInclude Include="MainMenuLevel.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UIManager.h" />
   </ItemGroup>
@@ -30,7 +31,8 @@
     <ClCompile Include="Cursur.cpp" />
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MainMenuScene.cpp" />
+    <ClCompile Include="MainMenuLevel.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
