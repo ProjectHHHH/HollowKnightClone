@@ -96,7 +96,7 @@ void Fade::SetFadestate(int fadeNum)
 {
 	switch (fadeNum)
 	{
-	case 0 :
+	case 0:
 		fadeState = EFadeState::FadeIn;
 		break;
 	case 1:
