@@ -10,7 +10,7 @@ Fade::Fade()
 	colorR = 0.f, colorG = 0.f; colorB = 0.f;
 
 	isVisible = true;
-	fadeState = EFadeState::None;
+	fadeState = EFadeState::FadeIn;
 	fadeColorState = EFadeColorState::Black;
 }
 
@@ -45,8 +45,12 @@ void Fade::PlayFadeIn()
 	cout << AlphaValue << endl;
 	printf("%d\n", fadeState);
 	if (AlphaValue <= 1.1f) {
-		AlphaValue += 0.01f;
+		AlphaValue += 0.005f;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);
+	}
+	else
+	{
+		fadeState = EFadeState::FadeOut;
 	}
 }
 
@@ -55,12 +59,12 @@ void Fade::PlayFadeOut()
 	cout << AlphaValue << endl;
 	printf("%d\n", fadeState);
 	if (AlphaValue >= -0.1f) {
-		AlphaValue -= 0.1f;
+		AlphaValue -= 0.005f;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);
 	}
 	else
 	{
-		fadeState = EFadeState::VisibleOff;
+		fadeState = EFadeState::None;
 	}
 }
 
