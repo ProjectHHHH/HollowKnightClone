@@ -4,7 +4,7 @@ class Cursur;
 class Main : public Scene
 {
 private:
-	MainMenuScene* mainMenuScene;
+	MainMenuLevel* mainMenuLevel;
 
 public:
 	virtual void Init() override;

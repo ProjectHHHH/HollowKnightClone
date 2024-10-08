@@ -1,22 +1,22 @@
 #include "stdafx.h"
-#include "MainMenuScene.h"
+#include "MainMenuLevel.h"
 #include "Main.h"
 
 void Main::Init()
 {
-	mainMenuScene = new MainMenuScene();
+	mainMenuLevel = new MainMenuLevel();
 	LIGHT->SetLightPos(Vector2(0.f,0.f),1);
 	LIGHT->light.lights->radius = 7000.f;
 }
 
 void Main::Release()
 {
-	SafeDelete(mainMenuScene);
+	SafeDelete(mainMenuLevel);
 }
 
 void Main::Update()
 {
-	mainMenuScene->Update();
+	mainMenuLevel->Update();
 }
 
 void Main::LateUpdate()
@@ -26,7 +26,7 @@ void Main::LateUpdate()
 
 void Main::Render()
 {
-	mainMenuScene->Render();
+	mainMenuLevel->Render();
 }
 
 void Main::ResizeScreen()

@@ -13,11 +13,15 @@ public:
 	virtual void LateUpdate();
 	virtual void Release();
 
-	void ChangeScene();
+	void PlayFade();
 	
+	void LoadLevel();
+
 private:
-	void LoadNewScene();
-	void UnloadCurScene();
+
+
+	void FadeIn();
+	void FadeOut();
 
 private:
 	Fade* fade;

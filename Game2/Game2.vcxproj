@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="Cursur.h" />
     <ClInclude Include="Fade.h" />
+    <ClInclude Include="Level.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="LevelManager.h" />
@@ -30,6 +31,7 @@
   <ItemGroup>
     <ClCompile Include="Cursur.cpp" />
     <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="LevelManager.cpp" />
