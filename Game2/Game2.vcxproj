@@ -19,22 +19,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseCharacter.h" />
     <ClInclude Include="Cursur.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Main.h" />
+
+    <ClInclude Include="Player.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="LevelManager.h" />
+    
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UIManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseCharacter.cpp" />
     <ClCompile Include="Cursur.cpp" />
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
+
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="LevelManager.cpp" />
+
     <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

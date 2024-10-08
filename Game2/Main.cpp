@@ -21,7 +21,7 @@ void Main::Update()
 
 void Main::LateUpdate()
 {
-	
+
 }
 
 void Main::Render()
@@ -44,6 +44,6 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, LPWSTR param, in
 	SafeDelete(main);
 	WIN->Destroy();
 	WIN->DeleteSingleton();
-	
+
 	return wParam;
 }
