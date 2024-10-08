@@ -1,86 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Cursur.h">
-      <Filter>UI</Filter>
-    </ClInclude>
-    <ClInclude Include="MainMenuLevel.h">
-      <Filter>Level</Filter>
-    </ClInclude>
-    <ClInclude Include="UIManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-
-    <ClInclude Include="Player.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseCharacter.h">
-      <Filter>BaseCharacter</Filter>
-
-    <ClInclude Include="LevelManager.h">
-      <Filter>Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Fade.h">
-
-      <Filter>Level\Fade</Filter>
-    </ClInclude>
-    <ClInclude Include="Level.h">
-      <Filter>Level</Filter>
-
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Cursur.cpp">
-      <Filter>UI</Filter>
-    </ClCompile>
-    <ClCompile Include="MainMenuLevel.cpp">
-      <Filter>Level</Filter>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Managers</Filter>
     </ClCompile>
     <ClCompile Include="UIManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
-
-    <ClCompile Include="Player.cpp">
-      <Filter>Player</Filter>
+    <ClCompile Include="Cursur.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
-    <ClCompile Include="BaseCharacter.cpp">
-      <Filter>BaseCharacter</Filter>
-
-    <ClCompile Include="LevelManager.cpp">
-      <Filter>Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="Fade.cpp">
-
-      <Filter>Level\Fade</Filter>
+    <ClCompile Include="MainMenuLevel.cpp">
+      <Filter>Levels</Filter>
     </ClCompile>
     <ClCompile Include="Level.cpp">
-      <Filter>Level</Filter>
-
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="Fade.cpp">
+      <Filter>Levels\Fade</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseCharacter.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Levels\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>Levels\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroLevel.cpp">
+      <Filter>Levels\MenuLevels</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>UI\Button</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="UI">
-      <UniqueIdentifier>{49bfa7b0-3aad-49ce-85d4-e0be3fafc2ea}</UniqueIdentifier>
-    </Filter>
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="LevelManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursur.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuLevel.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="Fade.h">
+      <Filter>Levels\Fade</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCharacter.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Levels\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Floor.h">
+      <Filter>Levels\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroLevel.h">
+      <Filter>Levels\MenuLevels</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Button.h">
+      <Filter>UI\Button</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <Filter Include="Managers">
-      <UniqueIdentifier>{00686826-b938-49e8-8faf-70f644c15577}</UniqueIdentifier>
+      <UniqueIdentifier>{edc3d152-6f37-4371-b97b-1fe8d79dbdd4}</UniqueIdentifier>
     </Filter>
-
-    <Filter Include="Player">
-      <UniqueIdentifier>{39f7ab29-c276-49fb-9358-2c183f59c819}</UniqueIdentifier>
+    <Filter Include="UI">
+      <UniqueIdentifier>{07cd1d4e-83ff-4686-8b2e-58134394b65f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="BaseCharacter">
-      <UniqueIdentifier>{364c6c94-c016-4159-82de-5e8c5e62d4f4}</UniqueIdentifier>
-
-<Filter Include="Level">
-      <UniqueIdentifier>{86370bb3-5567-4d63-ad18-af36d2c8ca98}</UniqueIdentifier>
+    <Filter Include="Character">
+      <UniqueIdentifier>{cd44e880-5900-411e-bcb6-e0173b89164d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Level\Fade">
-      <UniqueIdentifier>{d293b847-ac8a-4db7-a253-96fdcc549465}</UniqueIdentifier>
-
+    <Filter Include="Levels">
+      <UniqueIdentifier>{59bd7f46-7888-47e0-87fc-b21396f938e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Levels\Fade">
+      <UniqueIdentifier>{f59a4b0f-e2ed-41d0-8118-d6ce8105d7a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Objects">
+      <UniqueIdentifier>{d5e2866d-6be9-42b7-9e00-6523cef47b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Menus">
+      <UniqueIdentifier>{0bd134c7-b52e-4b64-8995-6adf338d5e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\MenuLevels">
+      <UniqueIdentifier>{8e29c218-0f97-4e84-bdaf-cb7002c9913b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Button">
+      <UniqueIdentifier>{27862787-0525-4d5c-9ecb-9697359407f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game2.rc" />
   </ItemGroup>
 </Project>
