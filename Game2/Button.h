@@ -13,6 +13,7 @@ public:
 	virtual void LateUpdate();
 	virtual void Render();
 private:
+	/*TO DO */
 	ObRect* col;
 	ObImage* buttonIm;
 };

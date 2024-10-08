@@ -4,7 +4,7 @@
 Button::Button()
 {
 	col = new ObRect();
-	buttonIm = new ObImage();
+	buttonIm = new ObImage(L"");
 }
 
 Button::~Button()

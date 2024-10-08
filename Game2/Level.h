@@ -17,12 +17,13 @@ public:
 	virtual void Render() = 0;
 	virtual void ResizeScreen() = 0;
 
-	std::vector <Wall> wall;
-	std::vector <Floor> floor;
+	//  	/*TO DO */
+	//std::vector <Wall> wall;
+	//std::vector <Floor> floor;
 
-	Player* player;
+	//Player* player;
 
-	ObImage* bg;
+	//ObImage* bg;
 
 };
 
