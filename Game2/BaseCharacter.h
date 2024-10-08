@@ -1,10 +1,22 @@
 #pragma once
+class ObRect;
+
+
+enum Direction
+{
+	L,
+	R
+};
+
 
 class BaseCharacter
 {
-private:
 
 public:
+
+private:
+	ObRect* col;
+	Direction dir;
 
 };
 
