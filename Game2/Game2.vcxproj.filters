@@ -12,11 +12,19 @@
     <ClInclude Include="UIManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
+
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCharacter.h">
+      <Filter>BaseCharacter</Filter>
+
     <ClInclude Include="LevelManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="Fade.h">
       <Filter>Maps\Fade</Filter>
+
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -30,11 +38,19 @@
     <ClCompile Include="UIManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseCharacter.cpp">
+      <Filter>BaseCharacter</Filter>
+
     <ClCompile Include="LevelManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
     <ClCompile Include="Fade.cpp">
       <Filter>Maps\Fade</Filter>
+
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +60,19 @@
     <Filter Include="Managers">
       <UniqueIdentifier>{00686826-b938-49e8-8faf-70f644c15577}</UniqueIdentifier>
     </Filter>
+
+    <Filter Include="Player">
+      <UniqueIdentifier>{39f7ab29-c276-49fb-9358-2c183f59c819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseCharacter">
+      <UniqueIdentifier>{364c6c94-c016-4159-82de-5e8c5e62d4f4}</UniqueIdentifier>
+
     <Filter Include="Maps">
       <UniqueIdentifier>{86370bb3-5567-4d63-ad18-af36d2c8ca98}</UniqueIdentifier>
     </Filter>
     <Filter Include="Maps\Fade">
       <UniqueIdentifier>{d293b847-ac8a-4db7-a253-96fdcc549465}</UniqueIdentifier>
+
     </Filter>
   </ItemGroup>
 </Project>

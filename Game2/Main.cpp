@@ -5,7 +5,7 @@
 void Main::Init()
 {
 	mainMenuScene = new MainMenuScene();
-	LIGHT->SetLightPos(Vector2(0.f,0.f),1);
+	LIGHT->SetLightPos(Vector2(0.f, 0.f), 1);
 	LIGHT->light.lights->radius = 7000.f;
 }
 
@@ -21,7 +21,7 @@ void Main::Update()
 
 void Main::LateUpdate()
 {
-	
+
 }
 
 void Main::Render()
@@ -44,6 +44,6 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, LPWSTR param, in
 	SafeDelete(main);
 	WIN->Destroy();
 	WIN->DeleteSingleton();
-	
+
 	return wParam;
 }
