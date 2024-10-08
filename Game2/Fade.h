@@ -5,7 +5,15 @@ enum class EFadeState
 {
 	FadeIn  = 0,
 	FadeOut,
+	VisibleOff,
 	None
+};
+
+enum class EFadeColorState
+{
+	Black,
+	Red,
+	White
 };
 
 class Fade
@@ -20,20 +28,25 @@ public:
 	virtual void Release();
 
 	void GetFade();
+	// 0 = Black, 1 = Red, 2 = White
+	void SetFadeColor(int colorVal);
 	// 0 = fadein 1 = fadeout 2 = nonfade
 	void SetFadestate(int fadeNum);
 
 	inline float GetAlphaValue() const { return AlphaValue; }
+	inline EFadeState GetFadeState() const { return fadeState; }
 private:
-	ObRect* fadeBox;
 	EFadeState fadeState;
+	EFadeColorState fadeColorState;
+	float colorR, colorG, colorB;
+	ObRect* fadeBox;
 
 	bool isVisible;
 
 	float AlphaValue;
 
 private:
-	void FadeIn();
-	void FadeOut();
+	void PlayFadeIn();
+	void PlayFadeOut();
 };
 

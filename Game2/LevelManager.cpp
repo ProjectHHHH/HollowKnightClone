@@ -35,17 +35,22 @@ void LevelManager::Release()
 {
 }
 
-void LevelManager::ChangeScene()
+void LevelManager::PlayFade()
 {
-	LoadNewScene();
+	if(fade->GetFadeState() == EFadeState::FadeIn)
+		FadeIn();
+	if (fade->GetFadeState() == EFadeState::FadeOut)
+		FadeOut();
 }
 
-void LevelManager::LoadNewScene()
+void LevelManager::FadeIn()
 {
-	fade->SetFadestate(1);
+	fade->SetFadestate(0);
 	fade->GetFade();
 }
 
-void LevelManager::UnloadCurScene()
+void LevelManager::FadeOut()
 {
+	fade->SetFadestate(1);
+	fade->GetFade();
 }
