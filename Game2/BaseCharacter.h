@@ -11,12 +11,12 @@ enum Direction
 
 class BaseCharacter
 {
-
 public:
 
 private:
 	ObRect* col;
 	Direction dir;
+
 
 };
 
