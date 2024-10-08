@@ -6,7 +6,7 @@ Fade::Fade()
 	fadeBox = new ObRect();
 	fadeBox->scale = Vector2(2500.f, 2500.f);
 
-	AlphaValue = 0.f;
+	AlphaValue = 1.f;
 	colorR = 0.f, colorG = 0.f; colorB = 0.f;
 
 	isVisible = true;
@@ -45,10 +45,9 @@ void Fade::PlayFadeIn()
 	cout << AlphaValue << endl;
 	printf("%d\n", fadeState);
 	if (AlphaValue <= 1.1f) {
-		AlphaValue += 0.005f;
+		AlphaValue += 0.6f * DELTA;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);
-	}
-	else
+	} else
 	{
 		fadeState = EFadeState::FadeOut;
 	}
@@ -59,10 +58,9 @@ void Fade::PlayFadeOut()
 	cout << AlphaValue << endl;
 	printf("%d\n", fadeState);
 	if (AlphaValue >= -0.1f) {
-		AlphaValue -= 0.005f;
+		AlphaValue -= 0.6f * DELTA;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);
-	}
-	else
+	} else
 	{
 		fadeState = EFadeState::None;
 	}
