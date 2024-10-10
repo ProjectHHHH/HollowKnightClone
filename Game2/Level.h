@@ -1,21 +1,22 @@
 #pragma once
 #include <vector>
+#include "Floor.h"
+#include "Wall.h"
+
 class Player;
-class Wall;
-class Floor;
 class ObImage;
 
 class Level
 {
 public:
-	Level() {};
-	virtual ~Level() {};
-	virtual void Init(Player* player) = 0;
-	virtual void Release() = 0;
-	virtual void Update() = 0;
-	virtual void LateUpdate() = 0;
-	virtual void Render() = 0;
-	virtual void ResizeScreen() = 0;
+	Level();
+	virtual ~Level();
+	virtual void Init(Player* player, class UIManager* uiManager, class LevelManager* levelManager);
+	virtual void Release();
+	virtual void Update();
+	virtual void LateUpdate();
+	virtual void Render();
+	virtual void ResizeScreen();
 
 	std::vector <Wall> wall;
 	std::vector <Floor> floor;

@@ -1,10 +1,10 @@
 #include "stdafx.h"
 #include "Button.h"
 
-Button::Button()
+Button::Button(wstring butImL)
 {
 	col = new ObRect();
-	buttonIm = new ObImage();
+	buttonIm = new ObImage(butImL);
 }
 
 Button::~Button()
