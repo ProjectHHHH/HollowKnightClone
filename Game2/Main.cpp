@@ -5,6 +5,9 @@
 void Main::Init()
 {
 	mainMenuLevel = new MainMenuLevel();
+	mainMenuLevel->Init(nullptr);
+	// ToDo : player 클래스 만들어지면 Init에 player 넣어주기
+	//mainMenuLevel->Init();
 	LIGHT->SetLightPos(Vector2(0.f,0.f),1);
 	LIGHT->light.lights->radius = 7000.f;
 }

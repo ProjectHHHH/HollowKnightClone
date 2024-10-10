@@ -1,19 +1,19 @@
 #pragma once
+#include <string>
 class ObRect;
 class ObImage;
 
 class Button
 {
 public:
-	Button();
+	Button(wstring butImL);
 	virtual ~Button();
 	virtual void Init();
 	virtual void Release();
 	virtual void Update();
 	virtual void LateUpdate();
 	virtual void Render();
-private:
-	/*TO DO */
+
 	ObRect* col;
 	ObImage* buttonIm;
 };

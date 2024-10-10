@@ -19,7 +19,6 @@ public:
 public:
 	Vector2 mousePos;
 
-private:
 	ObRect* col;
 	ObImage* cursurIm;
 

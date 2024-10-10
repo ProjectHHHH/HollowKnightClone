@@ -38,6 +38,9 @@
     <ClCompile Include="Button.cpp">
       <Filter>UI\Button</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Levels\Menus</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h" />
@@ -78,6 +81,9 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="Button.h">
       <Filter>UI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Levels\Menus</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

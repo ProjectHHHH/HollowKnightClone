@@ -1,8 +1,9 @@
 #pragma once
+#include "Level.h"
 class UIManager;
 class LevelManager;
 class Player;
-class MainMenuLevel
+class MainMenuLevel 
 {
 public:
 	MainMenuLevel();
@@ -15,6 +16,8 @@ public:
 	virtual void ResizeScreen();
 
 private:
+	Player* player;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+	class IntroLevel* introLevel;
 };

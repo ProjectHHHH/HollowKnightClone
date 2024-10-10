@@ -1,10 +1,13 @@
 #include "stdafx.h"
 #include "Button.h"
 
-Button::Button()
+Button::Button(wstring butImL)
 {
 	col = new ObRect();
-	buttonIm = new ObImage(L"");
+
+	col->isFilled = false;
+	buttonIm = new ObImage(butImL);
+	buttonIm->SetParentRT(*col);
 }
 
 Button::~Button()

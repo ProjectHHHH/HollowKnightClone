@@ -13,8 +13,7 @@ public:
 	virtual void LateUpdate();
 	virtual void Release();
 
-private:
 	Cursur* cursur;
-
+private:
 };
 
