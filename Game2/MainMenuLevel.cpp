@@ -17,9 +17,10 @@ MainMenuLevel::~MainMenuLevel()
 	SafeDelete(levelManager)
 }
 
-void MainMenuLevel::Init(Player* player, UIManager* uiManager, LevelManager* levelManager)
+void MainMenuLevel::Init(Player* player)
 {
 	this->player = player;
+	introLevel->Init(this->player, this->uiManager, this->levelManager);
 }
 
 void MainMenuLevel::Release()

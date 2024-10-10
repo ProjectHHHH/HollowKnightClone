@@ -3,19 +3,20 @@
 class UIManager;
 class LevelManager;
 class Player;
-class MainMenuLevel : public Level
+class MainMenuLevel 
 {
 public:
 	MainMenuLevel();
 	virtual ~MainMenuLevel();
-	virtual void Init(Player* player, UIManager* uiManager, LevelManager* levelManager) override;
-	virtual void Release() override;
-	virtual void Update() override;
-	virtual void LateUpdate() override;
-	virtual void Render() override;
-	virtual void ResizeScreen() override;
+	virtual void Init(Player* player);
+	virtual void Release();
+	virtual void Update();
+	virtual void LateUpdate();
+	virtual void Render();
+	virtual void ResizeScreen();
 
 private:
+	Player* player;
 	UIManager* uiManager;
 	LevelManager* levelManager;
 	class IntroLevel* introLevel;

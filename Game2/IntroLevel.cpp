@@ -17,7 +17,7 @@ IntroLevel::IntroLevel()
 IntroLevel::~IntroLevel()
 {
 	SafeDelete(bg);
-	SafeDelete(MainMenu);
+	SafeDelete(mainMenu);
 }
 
 void IntroLevel::Init(Player* player, UIManager* uiManager, LevelManager* levelManager)
@@ -25,6 +25,8 @@ void IntroLevel::Init(Player* player, UIManager* uiManager, LevelManager* levelM
 	this->player = player;
 	this->uiManager = uiManager;
 	this->levelManager = levelManager;
+
+	mainMenu->Init(this->uiManager, this->levelManager);
 }
 
 void IntroLevel::Release()

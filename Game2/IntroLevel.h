@@ -5,6 +5,7 @@
 class ObImage;
 class UIManager;
 class LevelManager;
+class MainMenu;
 
 class IntroLevel : protected Level
 {
@@ -22,5 +23,7 @@ private:
 	ObImage* bg;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+	MainMenu* mainMenu;
+	
 };
 

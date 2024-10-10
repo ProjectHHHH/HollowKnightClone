@@ -4,7 +4,9 @@
 Button::Button(wstring butImL)
 {
 	col = new ObRect();
+	col->isFilled = false;
 	buttonIm = new ObImage(butImL);
+	buttonIm->SetParentRT(*col);
 }
 
 Button::~Button()

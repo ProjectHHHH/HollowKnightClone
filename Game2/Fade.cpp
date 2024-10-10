@@ -42,8 +42,6 @@ void Fade::Release()
 
 void Fade::PlayFadeIn()
 {
-	cout << AlphaValue << endl;
-	printf("%d\n", fadeState);
 	if (AlphaValue <= 1.1f) {
 		AlphaValue += 0.6f * DELTA;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);
@@ -55,8 +53,6 @@ void Fade::PlayFadeIn()
 
 void Fade::PlayFadeOut()
 {
-	cout << AlphaValue << endl;
-	printf("%d\n", fadeState);
 	if (AlphaValue >= -0.1f) {
 		AlphaValue -= 0.6f * DELTA;
 		fadeBox->color = Color(colorR, colorG, colorB, AlphaValue);

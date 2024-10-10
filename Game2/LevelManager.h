@@ -18,8 +18,6 @@ public:
 	void LoadLevel();
 
 private:
-
-
 	void FadeIn();
 	void FadeOut();
 
