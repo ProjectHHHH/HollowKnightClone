@@ -24,6 +24,9 @@
     <ClInclude Include="Cursur.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="Floor.h" />
+    <ClInclude Include="GameExitMenu.h" />
+    <ClInclude Include="SettingMenu.h" />
+    <ClInclude Include="HUD.h" />
     <ClInclude Include="IntroLevel.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Main.h" />
@@ -31,9 +34,13 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="ProfileLevel.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UIManager.h" />
+    <ClInclude Include="AudioMenu.h" />
+    <ClInclude Include="VillageLevel.h" />
+    <ClInclude Include="Sliderbutton.h" />
     <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +49,9 @@
     <ClCompile Include="Cursur.cpp" />
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Floor.cpp" />
+    <ClCompile Include="GameExitMenu.cpp" />
+    <ClCompile Include="SettingMenu.cpp" />
+    <ClCompile Include="HUD.cpp" />
     <ClCompile Include="IntroLevel.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -49,7 +59,11 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
     <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="ProfileLevel.cpp" />
     <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="AudioMenu.cpp" />
+    <ClCompile Include="VillageLevel.cpp" />
+    <ClCompile Include="Sliderbutton.cpp" />
     <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>

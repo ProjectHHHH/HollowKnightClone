@@ -1,4 +1,10 @@
 #pragma once
+#include <map>
+#include <string>
+#include "HUD.h"
+
+using namespace std;
+
 class Cursur;
 class Fade;
 
@@ -13,6 +19,7 @@ public:
 	virtual void LateUpdate();
 	virtual void Release();
 
+	map<string, HUD*> hudMap;
 	Cursur* cursur;
 private:
 };

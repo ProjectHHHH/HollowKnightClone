@@ -18,13 +18,9 @@ public:
 	virtual void Render();
 	virtual void ResizeScreen();
 
-	//  	/*TO DO */
-	//std::vector <Wall> wall;
-	//std::vector <Floor> floor;
+	bool isVisible;
 
-	//Player* player;
-
-	//ObImage* bg;
-
+	std::vector <Wall> wall;
+	std::vector <Floor> floor;
 };
 

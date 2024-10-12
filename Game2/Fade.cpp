@@ -48,6 +48,7 @@ void Fade::PlayFadeIn()
 	} else
 	{
 		fadeState = EFadeState::FadeOut;
+
 	}
 }
 
@@ -98,6 +99,8 @@ void Fade::SetFadestate(int fadeNum)
 	case 1:
 		fadeState = EFadeState::FadeOut;
 		break;
+	case 2:
+		fadeState = EFadeState::VisibleOff;
 	default:
 		fadeState = EFadeState::None;
 		break;

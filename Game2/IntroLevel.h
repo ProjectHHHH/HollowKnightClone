@@ -5,9 +5,11 @@
 class ObImage;
 class UIManager;
 class LevelManager;
-class MainMenu;
 
-class IntroLevel : protected Level
+class MainMenu;
+class GameExitMenu;
+
+class IntroLevel : public Level
 {
 public:
 	IntroLevel();
@@ -23,7 +25,10 @@ private:
 	ObImage* bg;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+
 	MainMenu* mainMenu;
-	
+	GameExitMenu* gameExitMenu;
+	class SettingMenu* settingMenu;
+	class AudioMenu* audioMenu;
 };
 
