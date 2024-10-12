@@ -22,12 +22,5 @@ public:
 
 	std::vector <Wall> wall;
 	std::vector <Floor> floor;
-
-	Player* player;
-
-	ObImage* bg;
-
-	
-
 };
 
