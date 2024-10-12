@@ -39,7 +39,28 @@
       <Filter>UI\Button</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
-      <Filter>Levels\Menus</Filter>
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="VillageLevel.cpp">
+      <Filter>Levels\Village</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileLevel.cpp">
+      <Filter>Levels\Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="GameExitMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioMenu.cpp">
+      <Filter>UI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Sliderbutton.cpp">
+      <Filter>UI\Button</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,11 +100,32 @@
       <Filter>Levels\MenuLevels</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="MainMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="VillageLevel.h">
+      <Filter>Levels\Village</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileLevel.h">
+      <Filter>Levels\Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="GameExitMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioMenu.h">
+      <Filter>UI\Menus</Filter>
+    </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>UI\Button</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenu.h">
-      <Filter>Levels\Menus</Filter>
+    <ClInclude Include="Sliderbutton.h">
+      <Filter>UI\Button</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -105,14 +147,23 @@
     <Filter Include="Levels\Objects">
       <UniqueIdentifier>{d5e2866d-6be9-42b7-9e00-6523cef47b29}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Levels\Menus">
-      <UniqueIdentifier>{0bd134c7-b52e-4b64-8995-6adf338d5e02}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Levels\MenuLevels">
       <UniqueIdentifier>{8e29c218-0f97-4e84-bdaf-cb7002c9913b}</UniqueIdentifier>
     </Filter>
     <Filter Include="UI\Button">
       <UniqueIdentifier>{27862787-0525-4d5c-9ecb-9697359407f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Dungeon">
+      <UniqueIdentifier>{d6075dca-b794-4c68-b1f7-e5447e285cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Village">
+      <UniqueIdentifier>{05c411ca-f25a-4192-9ca8-1cbfa56de384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Profile">
+      <UniqueIdentifier>{97fa7c7a-c12f-4c62-9d8f-7e56446c5e9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menus">
+      <UniqueIdentifier>{0bd134c7-b52e-4b64-8995-6adf338d5e02}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

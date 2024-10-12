@@ -18,12 +18,16 @@ public:
 	virtual void Render();
 	virtual void ResizeScreen();
 
+	bool isVisible;
+
 	std::vector <Wall> wall;
 	std::vector <Floor> floor;
 
 	Player* player;
 
 	ObImage* bg;
+
+	
 
 };
 

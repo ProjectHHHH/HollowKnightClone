@@ -3,6 +3,7 @@
 class UIManager;
 class LevelManager;
 class Player;
+
 class MainMenuLevel 
 {
 public:
@@ -16,8 +17,11 @@ public:
 	virtual void ResizeScreen();
 
 private:
-	Player* player;
+	Player* player = nullptr;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+
 	class IntroLevel* introLevel;
+	class VillageLevel* villageLevel;
+	class ProfileLevel* profileLevel;
 };
