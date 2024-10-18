@@ -32,7 +32,6 @@
 *.app
 
 # Ignore Files
-/2DFrameWork
 /Build
 /Game1
 /Libs
