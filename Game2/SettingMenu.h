@@ -6,20 +6,21 @@ class ObImage;
 
 enum class EGameSettingCollisionState
 {
-	GameSetting,
-	Audio,
-	Video,
-	Keyboard,
-	Back,
+	GameSettingBnt,
+	AudioBnt,
+	VideoBnt,
+	KeyboardBnt,
+	BackBnt,
 	None
 };
 
 enum class ESettingMenuState
 {
-	GameStartBnt,
 	GameSettingBnt,
-	AchievementBnt,
-	GameExitBnt,
+	AudioBnt,
+	VideoBnt,
+	KeyboardBnt,
+	BackBnt,
 	None
 };
 
@@ -33,18 +34,15 @@ public:
 	virtual void Render() override;
 	virtual void LateUpdate() override;
 
-	void CollideWithMouse();
-	void BlurAlphaValue(float forceValue);
+	virtual void CollideWithMouse() override;
 
-	void InOutHUDMenu(string HUDname);
-
+	virtual void InOutHUDMenu(string HUDname) override;
+	virtual void BlurAlphaValue(float forceValue)override;
 private:
 	EGameSettingCollisionState collisionState;
 	ESettingMenuState menuState;
 
 	string HUDname;
-
-	float colorAlpha;
 
 	ObImage* menuTopIm;
 	ObImage* SettingIm;

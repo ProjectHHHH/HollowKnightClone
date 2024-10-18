@@ -105,35 +105,6 @@ void MainMenu::Update()
 
 }
 
-void MainMenu::InOutHUDMenu(string HUDname)
-{
-	if (menuState != EMainMenuState::None)
-	{
-		HUD* hud = uiManager->hudMap[HUDname];
-		if (hud->gameState != EGameState::Back)
-		{
-			bWordFade = true;
-			BlurAlphaValue(0.5f);
-
-			hud->isVisible = true;
-			if (colorAlpha <= 0.0f)
-			{
-				hud->gameState = EGameState::MainMenu;
-			}
-		} else if (hud->gameState == EGameState::Back)
-		{
-			bWordFade = false;
-			hud->isVisible = false;
-			BlurAlphaValue(0.5f);
-			if (colorAlpha >= 0.5f)
-			{
-				hud->gameState = EGameState::None;
-				menuState = EMainMenuState::None;
-			}
-		}
-	} 
-}
-
 void MainMenu::Render()
 {
 	if (!isVisible) return;
@@ -159,6 +130,7 @@ void MainMenu::CollideWithMouse()
 	{
 		if (uiManager->cursur->col->Intersect(gameStartBnt->col) && collisionState != EMainMenuCollisionState::GameStartBnt)
 		{
+			SOUND->Play("E_ui_change_selection");
 			Slider[0]->isVisible = true;
 			Slider[0]->SetWorldPos(Vector2(-113.f, 160.f));
 			Slider[1]->isVisible = true;
@@ -184,6 +156,7 @@ void MainMenu::CollideWithMouse()
 			}
 		} else if (uiManager->cursur->col->Intersect(gameSettingBnt->col) && collisionState != EMainMenuCollisionState::GameSettingBnt)
 		{
+			SOUND->Play("E_ui_change_selection");
 			Slider[0]->isVisible = true;
 			Slider[0]->SetWorldPos(Vector2(-113.f, 54.f));
 			Slider[1]->isVisible = true;
@@ -206,9 +179,11 @@ void MainMenu::CollideWithMouse()
 			{
 				menuState = EMainMenuState::GameSettingBnt;
 				HUDname = "SettingMenuHUD";
+				hud = uiManager->hudMap[HUDname];
 			}
 		} else if (uiManager->cursur->col->Intersect(achievementBnt->col) && collisionState != EMainMenuCollisionState::AchievementBnt)
 		{
+			SOUND->Play("E_ui_change_selection");
 			Slider[0]->isVisible = true;
 			Slider[0]->SetWorldPos(Vector2(-113.f, -40.f));
 			Slider[1]->isVisible = true;
@@ -227,6 +202,7 @@ void MainMenu::CollideWithMouse()
 			collisionState = EMainMenuCollisionState::None;
 		} else if (uiManager->cursur->col->Intersect(gameExitBnt->col) && collisionState != EMainMenuCollisionState::GameExitBnt)
 		{
+			SOUND->Play("E_ui_change_selection");
 			Slider[0]->isVisible = true;
 			Slider[0]->SetWorldPos(Vector2(-113.f, -140.f));
 			Slider[1]->isVisible = true;
@@ -250,7 +226,37 @@ void MainMenu::CollideWithMouse()
 				//	InOutGameExitBntMenu() 함수 발동 조건
 				menuState = EMainMenuState::GameExitBnt;
 				HUDname = "ExitMenuHUD";
+				hud = uiManager->hudMap[HUDname];
 			}
+		}
+	}
+}
+
+
+void MainMenu::InOutHUDMenu(string HUDname)
+{
+	if (menuState == EMainMenuState::None) return;
+
+	if (hud->gameState != EGameState::Back)
+	{
+		bWordFade = true;
+		BlurAlphaValue(0.5f);
+
+		if (colorAlpha <= 0.0f)
+		{
+			hud->isVisible = true;
+			hud->gameState = EGameState::MainMenu;
+		}
+	}
+	else if (hud->gameState == EGameState::Back)
+	{
+		bWordFade = false;
+		hud->isVisible = false;
+		BlurAlphaValue(0.5f);
+		if (colorAlpha >= 0.5f)
+		{
+			hud->gameState = EGameState::None;
+			menuState = EMainMenuState::None;
 		}
 	}
 }
