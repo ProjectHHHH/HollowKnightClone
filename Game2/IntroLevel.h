@@ -5,6 +5,7 @@
 class ObImage;
 class UIManager;
 class LevelManager;
+class Player;
 
 class MainMenu;
 class GameExitMenu;
@@ -22,9 +23,10 @@ public:
 	virtual void ResizeScreen() override;
 
 private:
-	ObImage* bg;
+	class BlurImage* bg;
 	UIManager* uiManager;
 	LevelManager* levelManager;
+	Player* player;
 
 	MainMenu* mainMenu;
 	GameExitMenu* gameExitMenu;

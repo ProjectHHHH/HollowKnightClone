@@ -5,6 +5,23 @@ class Button;
 class ObImage;
 class Sliderbutton;
 
+enum class EAudioCollisionState
+{
+	DefaultValBnt,
+	BackBnt,
+	SliderAll,
+	SliderMusic,
+	SliderEffect,
+	None
+};
+
+enum class EAudioMenuState
+{
+	DefaultValBnt,
+	BackBnt,
+	None
+};
+
 class AudioMenu : public HUD
 {
 public:
@@ -15,12 +32,27 @@ public:
 	virtual void Render() override;
 	virtual void LateUpdate() override;
 
-	void CollideWithMouse();
+	virtual void CollideWithMouse() override;
+
+	virtual void InOutHUDMenu(string HUDname) override;
+	virtual void BlurAlphaValue(float forceValue) override;
+
 
 private:
+
+	EAudioMenuState menuState;
+	EAudioCollisionState collisionState;
+
+	Sliderbutton* sliderbutton[3];
+
+	ObImage* audioTxtIm;
+	ObImage* menuTopIm;
+
 	ObImage* totalVolumeTxtIm;
-	ObImage* SoundEffectsVolumeTxtIm;
 	ObImage* MusicVolumeTxtIm;
-	Sliderbutton* sliderbutton;
+	ObImage* SoundEffectsVolumeTxtIm;
+
+	Button* defaultValBnt;
+	Button* backBnt;
 };
 

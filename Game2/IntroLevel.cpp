@@ -12,15 +12,18 @@
 
 IntroLevel::IntroLevel()
 {
-	bg = new ObImage(L"Background/wallpaperflare.com_wallpaper.jpg");
-	bg->scale = Vector2(1900.f, 1000.f);
+	SOUND->AddSound("Title.wav", "M_Title", true);
+	SOUND->Play("M_Title");
+	SOUND->AddSound("ui_change_selection.wav", "E_ui_change_selection", false);
+
+	bg = new BlurImage(L"Menu/MainMenuBG.png");
+	bg->scale = Vector2(2000.f, 1200.f);	
 	bg->SetWorldPos(Vector2(0.f, 0.f));
 
 	mainMenu = new MainMenu();
 	gameExitMenu = new GameExitMenu();
 	settingMenu = new SettingMenu();
 	audioMenu = new AudioMenu();
-
 	isVisible = true;
 }
 
@@ -54,6 +57,7 @@ void IntroLevel::Update()
 	if (!isVisible) return;
 
 	bg->Update();
+
 	mainMenu->Update();
 	gameExitMenu->Update();
 	settingMenu->Update();
@@ -62,6 +66,7 @@ void IntroLevel::Update()
 
 void IntroLevel::LateUpdate()
 {
+	audioMenu->LateUpdate();
 }
 
 void IntroLevel::Render()
@@ -69,6 +74,7 @@ void IntroLevel::Render()
 	if (!isVisible) return;
 
 	bg->Render();
+
 	mainMenu->Render();
 	gameExitMenu->Render();
 	settingMenu->Render();
